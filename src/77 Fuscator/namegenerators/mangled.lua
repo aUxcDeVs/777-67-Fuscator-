@@ -2,14 +2,8 @@
 -- Made by Claude & 777Fuscator Team
 -- Generates mangled variable names using base-conversion
 
--- Helper function to create character array
-local function chararray(str)
-	local t = {}
-	for i = 1, #str do
-		t[i] = str:sub(i, i)
-	end
-	return t
-end
+local util = require("777Fuscator.util");
+local chararray = util.chararray;
 
 local VarDigits = chararray("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_");
 local VarStartDigits = chararray("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
